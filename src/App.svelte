@@ -41,6 +41,9 @@
 
 	.legend {
 		align-items: baseline;
+		position: -webkit-sticky; /* Safari */
+		position: sticky;
+		top: 0;
 	}
 
 	.key {
@@ -50,9 +53,7 @@
 		flex-wrap: wrap;
 		justify-content: space-around;
 		text-align: center;
-		position: -webkit-sticky; /* Safari */
-		position: sticky;
-		top: 0;
+
 	}
 
 
