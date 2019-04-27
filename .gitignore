@@ -5,3 +5,4 @@ package-lock.json
 yarn.lock
 .ipynb_checkpoints
 .ipynb
+.py
