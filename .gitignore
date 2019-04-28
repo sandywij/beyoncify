@@ -3,6 +3,6 @@ node_modules
 public/bundle.*
 package-lock.json
 yarn.lock
-.ipynb_checkpoints
-.ipynb
-.py
+*.ipynb_checkpoints
+*.ipynb
+*.py
