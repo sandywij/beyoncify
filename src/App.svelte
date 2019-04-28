@@ -40,15 +40,18 @@
 <style>
 
 	.legend {
-		align-items: baseline;
+		width:100%;
+		background-color: #FEE290;
 		position: -webkit-sticky; /* Safari */
 		position: sticky;
 		top: 0;
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
 	}
 
 	.key {
-		background-color: #FEE290;
-		width:100%;
+		width:80%;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
@@ -74,7 +77,13 @@
 
 <div class="main-container">
 	<div class="legend">
-		<p>key:</p>
+		<div>
+			<h1>B</h1>
+		</div>
+		<div>
+			<p>key:</p>
+		</div>
+
 
 		<div class="key">
 			{#each qualities as q, qi}
