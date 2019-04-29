@@ -75,6 +75,7 @@
 		flex-wrap: wrap;
 		justify-content: space-around;
 		text-align: center;
+		margin-bottom: 100px;
 	}
 
 	#music-player {

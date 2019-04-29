@@ -72,6 +72,8 @@
   line {
     mix-blend-mode: multiply;
   }
+
+
 </style>
 
 <div class="graphs">
