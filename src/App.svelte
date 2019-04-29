@@ -65,9 +65,20 @@
 		padding-left: 1em;
 	}
 
+	@media screen and (min-width: 600px) {
+		rect {
+			mix-blend-mode: multiply;
+		}
+}
+
+@media screen and (max-width: 600px) {
 	rect {
-		mix-blend-mode: multiply;
+		opacity: 0.9;
 	}
+}
+
+
+
 
 	.viz-container {
 		width:100%;

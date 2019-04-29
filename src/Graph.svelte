@@ -69,9 +69,20 @@
 </script>
 
 <style>
+
+  @media screen and (min-width: 600px) {
+    line {
+      mix-blend-mode: multiply;
+    }
+}
+
+@media screen and (max-width: 600px) {
   line {
-    mix-blend-mode: multiply;
+    opacity: 0.9;
   }
+}
+
+
 
 
 </style>
