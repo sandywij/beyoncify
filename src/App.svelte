@@ -26,7 +26,7 @@
   const qualities = [
     { id: "danceability", color: "#d53e4f" },
     { id: "energy", color: "#fc8d59" },
-    { id: "valence", color: "#e6f598" },
+    { id: "valence", color: "#ffe200" },
     { id: "speechiness", color: "#99d594" },
     { id: "acousticness", color: "#3288bd" },
     { id: "instrumentalness", color: "#756bb1" }
@@ -35,32 +35,31 @@
 
 <style>
   .center {
-	  width: 100%;
-	  max-width: 600px;
-	  margin: auto;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
     text-align: center;
     padding: 1em 0em;
   }
 
   .analysis {
-	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	max-width: 600px;
-	width: 100%;
-	margin: auto;
-	line-height: 2em;
+    max-width: 600px;
+    width: 80%;
+    margin: auto;
+    line-height: 1.5em;
   }
 
   .legend {
     width: 100%;
-    background-color: #fee290;
+    background-color: #ffffc1;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
-	font-size: 0.8em;
-	height: 100px;
+    font-size: 0.8em;
+    height: 100px;
   }
 
   .key {
@@ -117,47 +116,31 @@
 
 <div class="main-container">
 
-
-
   <div class="center">
-        
+
     <h1>Beyoncify</h1>
-  <a style="font-size:12px; font-family:'Open Sans';" href="https://www.sandywij.com/">Sandy Guberti Ng</a>
-      </div>
-
-  <div class="center">
-
-    <p>Patiently waiting for my demise</p>
-
-    <p>'Cause my success can't be quantified</p>
-
-    <p>If I gave two fucks, two fucks about streaming numbers</p>
-
-    <p>Would have put Lemonade up on Spotify</p>
+    <a
+      style="font-size:12px; font-family:'Open Sans';"
+      href="https://www.sandywij.com/">
+      Sandy Guberti Ng
+    </a>
   </div>
 
-<div class="analysis">
+  <div class="center">
+
     <p>
-      Since Lemonade’s release on April 23 2016, it had been exclusively
-      available on Tidal. Three years after its release, it is now finally
-      available on other streaming platforms — including Spotify.
-	  </p>
-
-	  <p>
-	   For every
-      track in Spotify’s catalog, runs a suite of audio analysis algorithms.
-      These extract about a dozen high-level acoustic attributes from the audio.
-	  </p>
-
-	  <p>
-	  In this visualization shows seven attributes that were available on Spotify’s API: Duration,
-      Danceability, Energy, Valence, Speechiness, Acousticness,
-      Instrumentalness. With the exception of Duration, all the attributes are
-      measures from 0.0 to 1.0.
+      Patiently waiting for my demise
+      <br />
+      Cause my success can't be quantified
+      <br />
+      If I gave two fucks, two fucks about streaming numbers
+      <br />
+      Would have put Lemonade up on Spotify
     </p>
   </div>
 
   
+
   <div class="legend">
 
     <div>
@@ -176,23 +159,26 @@
     </div>
   </div>
 
-<div>
+  <div>
 
-<div class="center">    <p><strong>Click to play track.</strong></p>
-</div>
+    <div class="center">
+      <p>
+        <strong>Click to play track.</strong>
+      </p>
+    </div>
 
-  <div class="viz-container">
-    {#await promise}
-      <p>...loading</p>
-    {:then data}
-      {#each data as d}
-        <Graph data={d} {qualities} bind:spotifyUri bind:playing />
-      {/each}
-    {:catch error}
-      <p style="color: red">Didn't load :(</p>
-    {/await}
+    <div class="viz-container">
+      {#await promise}
+        <p>...loading</p>
+      {:then data}
+        {#each data as d}
+          <Graph data={d} {qualities} bind:spotifyUri bind:playing />
+        {/each}
+      {:catch error}
+        <p style="color: red">Didn't load :(</p>
+      {/await}
+    </div>
   </div>
-</div>
   <div id="music-player">
 
     <iframe
@@ -204,5 +190,28 @@
       allow="encrypted-media" />
     <p>Track: {playing}</p>
   </div>
-</div>
 
+
+
+<div class="analysis">
+    <p>
+      Since Lemonade’s release on April 23 2016, it had been exclusively
+      available on Tidal. Three years after its release, it is now finally
+      available on other streaming platforms — including Spotify.
+    </p>
+
+        <p>
+      For every track in Spotify’s catalog, runs a suite of audio analysis
+      algorithms. These extract about a dozen high-level acoustic attributes
+      from the audio.
+    </p>
+
+    <p>
+      In this visualization shows seven attributes that were available on
+      Spotify’s API: Duration, Danceability, Energy, Valence, Speechiness,
+      Acousticness, Instrumentalness. With the exception of Duration, all the
+      attributes are measures from 0.0 to 1.0.
+    </p>
+  </div>
+
+</div>
