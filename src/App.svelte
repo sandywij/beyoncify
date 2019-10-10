@@ -150,8 +150,7 @@
 	  </p>
 
 	  <p>
-	  In this visualization, we look at
-      seven attributes that were available on Spotify’s API: Duration,
+	  In this visualization shows seven attributes that were available on Spotify’s API: Duration,
       Danceability, Energy, Valence, Speechiness, Acousticness,
       Instrumentalness. With the exception of Duration, all the attributes are
       measures from 0.0 to 1.0.
